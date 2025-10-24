@@ -1,3 +1,6 @@
+# TDE 3 -> Ordenação 
+Vinicius Marcon
+
 ## Objetivo do projeto
 - Comparar o desempenho dos algoritmos de ordenação: Comb Sort, Gnome Sorte e Bucket Sort com bubble sort com flag de parada, selection sort e cocktail sort, utilizando os vetores disponibilizados pelo professor: 
   - int[] vetor1= {12, 18, 9, 25, 17, 31, 22, 27, 16, 13, 19, 23, 20, 30, 14, 11, 15, 24, 26, 28};
