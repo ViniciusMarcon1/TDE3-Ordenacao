@@ -6,7 +6,7 @@
 
 ## Estrutura
 ```
-ProjetoSorts
+src/
 ├── app
 │   ├── Main.java 
 │   ├── SortAlgorithm.java
@@ -14,15 +14,12 @@ ProjetoSorts
 │   └── Stats.java
 │
 ├── Algoritmos 
-│   ├── BubbleFlagSort.java
-│   ├── BucketCountingSort.java
-│   ├── CocktailSort.java
-│   ├── CombSort.java
-│   ├── GnomeSort.java
-│   └── SelectionSort.java
-│
-└── .gitignore
-└── Esse README :) 
+    ├── BubbleFlagSort.java
+    ├── BucketCountingSort.java
+    ├── CocktailSort.java
+    ├── CombSort.java
+    ├── GnomeSort.java
+    └── SelectionSort.java
 ```
 
 ## Resultados
