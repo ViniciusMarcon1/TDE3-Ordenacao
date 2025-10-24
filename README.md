@@ -26,3 +26,55 @@ src/
 ```
 
 ## Resultados
+
+### Vetor 1
+```
++---------+--------------------+--------------+-------------+------------------------------------------+
+| Ranking | Algoritmo          | Comparações  | Movimentos  | Observação                              |
++---------+--------------------+--------------+-------------+------------------------------------------+
+| 1       | Bucket (Counting)  | 38           | 40          | Mais eficiente no geral                 |
+| 2       | Selection Sort     | 190          | 54          | Poucos movimentos                       |
+| 3       | Comb Sort          | 129          | 66          | Bom equilíbrio entre comparações/trocas |
+| 4       | Cocktail Sort      | 154          | 234         | Eficiência média                        |
+| 5       | Bubble (flag)      | 180          | 234         | Similar ao Cocktail                     |
+| 6       | Gnome Sort         | 175          | 234         | Mesmo custo de trocas do Bubble         |
++---------+--------------------+--------------+-------------+------------------------------------------+
+```
+- Melhor em movimentos: Bucket (Counting).
+- Menos comparações: Bucket (Counting).
+
+### Vetor 2 
+```
++---------+--------------------+--------------+-------------+------------------------------------------+
+| Ranking | Algoritmo          | Comparações  | Movimentos  | Observação                               |
++---------+--------------------+--------------+-------------+------------------------------------------+
+| 1       | Cocktail Sort      | 19           | 0           | Detectou ordenação rapidamente           |
+| 2       | Bubble (flag)      | 19           | 0           | Mesmo desempenho do Cocktail             |
+| 3       | Gnome Sort         | 19           | 0           | Excelente em listas ordenadas            |
+| 4       | Comb Sort          | 110          | 0           | Poucas comparações, sem trocas           |
+| 5       | Selection Sort     | 190          | 0           | Ineficiente neste cenário                |
+| 6       | Bucket (Counting)  | 38           | 40          | Sempre linear, mas faz regravações       |
++---------+--------------------+--------------+-------------+------------------------------------------+
+```
+- Melhor em movimentos: Cocktail / Bubble / Gnome (empatados). 
+- Menos comparações: Cocktail / Bubble / Gnome (empatados).
+
+### Vetor 3 
+```
++---------+--------------------+--------------+-------------+------------------------------------------+
+| Ranking | Algoritmo          | Comparações  | Movimentos  | Observação                              |
++---------+--------------------+--------------+-------------+------------------------------------------+
+| 1       | Bucket (Counting)  | 38           | 40          | Excelente, independente da ordem inicial|
+| 2       | Selection Sort     | 190          | 30          | Poucos movimentos, custo fixo           |
+| 3       | Comb Sort          | 129          | 54          | Bom desempenho geral                    |
+| 4       | Cocktail Sort      | 190          | 570         | Elevado número de trocas                |
+| 5       | Bubble (flag)      | 190          | 570         | Mesmo padrão do Cocktail                |
+| 6       | Gnome Sort         | 399          | 570         | Pior caso para este algoritmo           |
++---------+--------------------+--------------+-------------+------------------------------------------+
+```
+
+- Melhor em movimentos: Bucket (Counting).
+- Menos comparações: Bucket (Counting).
+
+### Conclusão 
+- Para vetores desordenados e aleatórios o melhor algoritmo foi o Bucket (Counting) porque ele identifica rapidamente comparações e faz trocas. Para vetores ordenados (caso do vetor2), os algoritmos Bubble, Cocktail e Gnome, detectam mais rápido as ordenações e fazem menos comparações. E no último caso, para vetores decrescentes, o melhor algoritmo foi o Bucket (Counting), pois segue a lógica de complexidade linear independente da ordem dos dados. 
